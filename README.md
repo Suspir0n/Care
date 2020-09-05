@@ -30,37 +30,6 @@ $ cd "directory of your choice"
 $ git clone https://github.com/Suspir0n/Care.git
 ```
 
-### Construction from Api
-
-To build the api with TypeORM, execute the commands below:
-
-```
-$ typeorm init --name "name from your api" --express --database "database from your choice"
-```
-
-The command will download all necessary files, with an example entity and an example controller for you.
-
-With that, to make your project safer, faltario you add JWT and MD5.
-
-Well, the JWT (JSON Web Token) is a data transfer system that can be sent via POST or in an HTTP header (header) in a “secure” way, this information is digitally signed by an HMAC algorithm, or a pair of public / private keys using RSA 
-and the MD5 has a cryptographic hash function, used more in terms of saving passwords in a database.
-To execute both, use the following commands:
-
-```
-$ npm install jsonwebtoken
-$ npm install md5
-```
-
-The command will download all the dependencies you need to use this tool.
-
-### Construction from System
-
-In deployment because I haven't started developing the system yet
-
-### Construction from Application
-
-In deployment because I haven't started developing the application yet
-
 ## Features
 
 The project can be used as a model to start the development of a Nodejs project using TypeORM. It also demonstrates in a practical way how to create a TypeORM api quickly and easily.
