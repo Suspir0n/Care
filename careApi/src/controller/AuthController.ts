@@ -13,9 +13,7 @@ export class AuthController extends BaseController<User> {
 
     async auth(request: Request){
         let { email, password } = request.body;
-        if(!email || !password){
-            return { status: 400, message: 'Informe o email e a senha para efetuarr o login!'};
-        }
+        this.checkCredentialExits(email, password);
 
         let user = await this.repostitory.findOne({ email: email, password: md5(password) });
         if(user){
@@ -39,5 +37,9 @@ export class AuthController extends BaseController<User> {
         }else{
             return { status: 404, message: 'E-mail ou senha inválidos'}
         }
+    }
+
+    checkCredentialExits(email: string, password: string){
+        if(!email || !password) return { status: 400, message: 'Informe o email e a senha para efetuar o login!'};
     }
 }
