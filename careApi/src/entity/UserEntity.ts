@@ -17,4 +17,7 @@ export class User extends baseEntity {
 
     @Column({ type: "varchar", length: 200 })
     photo: string;
+
+    @Column({ default: false })
+    isRoot: boolean;
 }
