@@ -5,7 +5,7 @@ import { SubCategoryEntity } from '../entity/SubCategoryEntity';
 export class SubCategoryController extends BaseController<SubCategoryEntity> {
 
   constructor() {
-    super(SubCategoryEntity);
+    super(SubCategoryEntity, true);
   }
   async save(request: Request) {
     let _subCategory = <SubCategoryEntity>request.body;

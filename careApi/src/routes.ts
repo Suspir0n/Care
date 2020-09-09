@@ -3,6 +3,8 @@ import { AuthController } from "./controller/AuthController";
 import { AddressController } from "./controller/AddressController";
 import { CategoryController } from "./controller/CategoryController";
 import { SubCategoryController } from "./controller/SubCategoryController";
+import { CardController } from "./controller/CardController";
+import { NewProductController } from "./controller/NewProductController";
 
 export const Routes = [
     { method: "get", route: "/users", controller: UserController, action: "all" },
@@ -28,5 +30,16 @@ export const Routes = [
     { method: "get", route: "/subcategory/:id", controller: SubCategoryController, action: "one" },
     { method: "post", route: "/subcategory", controller: SubCategoryController, action: "save" },
     { method: "delete", route: "/subcategory/:id", controller: SubCategoryController, action: "remove" },
+
+    { method: "get", route: "/card", controller: CardController, action: "all" },
+    { method: "get", route: "/card/:id", controller: CardController, action: "one" },
+    { method: "post", route: "/card", controller: CardController, action: "save" },
+    { method: "delete", route: "/card/:id", controller: CardController, action: "remove" },
+
+    { method: "get", route: "/newProduct", controller: NewProductController, action: "all" },
+    { method: "get", route: "/newProduct/:id", controller: NewProductController, action: "one" }, 
+    { method: "post", route: "/newProduct", controller: NewProductController, action: "save" },
+    { method: "post", route: "/newProduct/create", controller: NewProductController, action: "createNewProduct" }, 
+    { method: "delete", route: "/newProduct/:id", controller: NewProductController, action: "remove" },
 
 ];

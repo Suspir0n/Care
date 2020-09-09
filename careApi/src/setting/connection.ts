@@ -1,6 +1,10 @@
 import { createConnection } from "typeorm";
 import { UserEntity } from "../entity/UserEntity";
 import { AddressEntity } from "../entity/AddressEntity";
+import { CategoryEntity } from "../entity/CategoryEntity";
+import { SubCategoryEntity } from "../entity/SubCategoryEntity";
+import { CardEntity } from "../entity/CardEntity";
+import { NewProductEntity } from "../entity/NewProductEntity";
 
 const cfg = require('../../ormconfig.json');
 
@@ -17,7 +21,11 @@ export default {
             logging: false,
             entities: [
                 UserEntity,
-                AddressEntity
+                AddressEntity,
+                CategoryEntity,
+                SubCategoryEntity,
+                CardEntity,
+                NewProductEntity
             ]
           }
         );
