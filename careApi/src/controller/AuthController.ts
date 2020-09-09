@@ -1,14 +1,15 @@
-import {User} from "../entity/UserEntity";
+
 import { BaseController } from "./BaseController";
 import { Request } from 'express';
 import * as md5 from 'md5';
 import { sign } from 'jsonwebtoken';
 import config from "../setting/config";
+import { UserEntity } from "../entity/UserEntity";
 
-export class AuthController extends BaseController<User> {
+export class AuthController extends BaseController<UserEntity> {
 
     constructor(){
-        super(User);
+        super(UserEntity);
     }
 
     async auth(request: Request){

@@ -1,8 +1,9 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-import { baseEntity } from "./BaseEntity";
+import {Entity, Column} from "typeorm";
+import { BaseEntity } from "./BaseEntity";
 
 @Entity({ name: 'user'})
-export class User extends baseEntity {
+export class UserEntity extends BaseEntity {
+   
     @Column({ type: "varchar", length: 100 })
     firstName: string;
 

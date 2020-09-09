@@ -1,5 +1,6 @@
 import { createConnection } from "typeorm";
-import { User } from "../entity/UserEntity";
+import { UserEntity } from "../entity/UserEntity";
+import { AddressEntity } from "../entity/AddressEntity";
 
 const cfg = require('../../ormconfig.json');
 
@@ -15,7 +16,8 @@ export default {
             synchronize: true,
             logging: false,
             entities: [
-                User
+                UserEntity,
+                AddressEntity
             ]
           }
         );
