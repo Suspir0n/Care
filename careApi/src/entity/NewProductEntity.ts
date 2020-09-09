@@ -3,7 +3,7 @@ import { BaseEntity } from "./BaseEntity";
 import { SubCategoryEntity } from "./SubCategoryEntity";
 import { UserEntity } from "./UserEntity";
 
-@Entity({ name: 'subcategory'})
+@Entity({ name: 'new-product'})
 export class NewProductEntity extends BaseEntity {
 
     @Column({ type: "varchar", length: 200 })
